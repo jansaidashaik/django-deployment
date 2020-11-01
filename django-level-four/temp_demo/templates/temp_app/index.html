@@ -1,0 +1,9 @@
+
+{% extends 'temp_app/base.html' %}
+
+{% block content %}
+    <h2>Welcome to Index</h2>
+    <h3>This is an example of Template Inheritance!</h3>
+    <h4>{{ text | cut:'hello' }}</h4>
+    <h6>{{ number | add:"45"}}</h6>
+{% endblock %}

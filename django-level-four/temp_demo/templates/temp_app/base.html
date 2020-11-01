@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+     <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <style>
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1 0 auto;
+          }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container nav-wrapper">
+          <a href="{% url 'index' %}" class="brand-logo">Logo</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="{% url 'admin:index' %}">Admin</a></li>
+            <li><a href="{% url 'temp_app:other' %}">Other</a></li>
+          </ul>
+        </div>
+    </nav>
+    <div class="container">
+        {% block content %}
+            <!-- Anything outside this will be inherited if we extend -->
+        {% endblock %}
+    </div>
+    <footer class="page-footer" style="padding-top:0px;">
+          <div class="footer-copyright">
+            <div class="container">
+            © 2014 Copyright Text
+            <a class="grey-text text-lighten-4 center" href="#!">More Links</a>
+            </div>
+          </div>
+    </footer>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
